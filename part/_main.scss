@@ -1,0 +1,40 @@
+.main{
+    background-image: url(img/bg_main.png);
+    @extend %bg;
+    text-align: center;
+
+    h1{
+        font:{
+            family: $font_heading;
+            weight: 100;
+            size: 90px;
+        }
+
+        color: $white;
+        margin-top: 250px;
+        text: {
+            align: center;
+            shadow: 1px 1px 0px $black;
+        }
+    }
+    p{
+        color: $white;
+        margin: 30px 0 45px 0px;
+    }
+    a{
+        padding: 15px 60px;
+        color: $black;
+        position: relative;
+        z-index: 100;
+        text-transform: uppercase;
+        box-shadow: 0 0 40px 40px $gold inset, 0 0 0 0 $gold;
+        transition: all 150ms ease-in-out;
+            &:hover{
+                color: $gold;
+                box-shadow: 0 0 10px 0 rgba(220, 196, 79, 1) inset, 0 0 10px 4px rgba(220, 196, 79, 1);
+                font-weight: 500;
+            }
+    }
+
+
+}

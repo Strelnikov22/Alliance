@@ -1,0 +1,57 @@
+.header{
+    min-height: 0;
+    background-color: $bg_black;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    &__container{
+        max-width: 1100px;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &__logo{
+        background-color: $bg_black;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        margin-top: 50px;
+        img{
+            width: 210px;
+            margin: -7px 0px 0px -8px;
+        }
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        font: {
+            family: $font_text;
+            size: 16px;
+        }
+        .lang{
+            border-left: 1px solid $white;
+            img{
+                transition: all 150ms ease-in-out;
+            }
+            img:hover{
+                box-shadow: 0 0 20px 0 rgba(220, 196, 79, 1) inset, 0 0 30px 2px rgba(220, 196, 79, 1);
+                border-radius: 100%;
+            }
+        }
+        li{
+            margin: 0px 10px;
+            
+            a{
+                color: $white;
+                transition: all 150ms ease-in-out;
+                &:hover{
+                   color: $gold;
+                }
+            }
+        }
+        
+    }
+}
