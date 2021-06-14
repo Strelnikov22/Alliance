@@ -26,14 +26,7 @@
         color: $black;
         position: relative;
         z-index: 100;
-        text-transform: uppercase;
-        box-shadow: 0 0 40px 40px $gold inset, 0 0 0 0 $gold;
-        transition: all 150ms ease-in-out;
-            &:hover{
-                color: $gold;
-                box-shadow: 0 0 10px 0 rgba(220, 196, 79, 1) inset, 0 0 10px 4px rgba(220, 196, 79, 1);
-                font-weight: 500;
-            }
+        @extend %button_effect;
     }
 
 

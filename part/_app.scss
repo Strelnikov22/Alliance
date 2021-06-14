@@ -1,0 +1,20 @@
+.app{
+    background-image: url(img/bg_app.png);
+    overflow: hidden;
+    min-height: 480px;
+    background-color: $bg_black;
+    h2{
+        @include line_decoration($white, url(img/Vector_text_white.svg));
+        @extend %for_h2;
+    }
+    a{
+        text-align: center;
+        margin: 50px auto;
+        display: block;
+        padding: 25px 0;
+        width: 400px;
+        color: $black;
+        font-size: 30px;
+        @extend %button_effect;
+    }
+}
