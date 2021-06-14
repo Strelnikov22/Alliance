@@ -23,13 +23,40 @@ $bg_black:rgba(0, 0, 0, 0.8);
 
 
 @mixin bg_icon($img){
+        height: 110px;
+        width: 110px;
+        border-radius: 100%;
+        background-color: $white;
+        position: relative;
+        margin: 50px 0px 20px 20px;
+            &::after{
+                content: "";
+                display: block;
+                width: 130px;
+                height: 130px;
+                border: 1px solid $black;
+                border-radius: 100%;
+                position: absolute;
+                top: -11px;
+                left: -11px;
+                    }
     background: {
         image: $img;
         repeat: no-repeat;
         position: center;
-        size:175%;
+        size: 80px;
     }
-    overflow: hidden;
+}
+
+@mixin aboutUs_icon($img){
+    background: {
+        image: $img;
+        repeat: no-repeat;
+        position: center;
+        size: 100%;
+    }
+    width: 50px;
+    height: 70px;
 }
 
 @mixin line_decoration($color, $img) {
@@ -44,7 +71,7 @@ $bg_black:rgba(0, 0, 0, 0.8);
     text-align: center;
     font:{
         family: $font_heading;
-        weight:400;
+        weight:600;
         size: 36px;
     } 
 
@@ -53,9 +80,23 @@ $bg_black:rgba(0, 0, 0, 0.8);
 %flex-active{
     display: flex;
 }
-
-@mixin tablet() {
+@mixin xl() {
+    @media screen and (max-width:1200px) {
+        @content;
+    }
+}
+@mixin lg() {
+    @media screen and (max-width:992px) {
+        @content;
+    }
+}
+@mixin md() {
     @media screen and (max-width:768px) {
+        @content;
+    }
+}
+@mixin sm() {
+    @media screen and (max-width:576px) {
         @content;
     }
 }

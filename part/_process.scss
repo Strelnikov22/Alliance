@@ -1,0 +1,52 @@
+.process{
+    background-image: url(img/bg_process.png),
+    linear-gradient(270deg, #F4F2F2 18.35%, #fffffffa 100%);
+    background-blend-mode:overlay;
+    overflow: hidden;
+    min-height: 480px;
+    h2{
+        @include line_decoration($black, url(img/h2_decor_black.png));
+        @extend %for_h2;
+    }
+    &__icon{
+        @extend %flex-active;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        li{
+            width: 150px;
+            @include sm{
+                width: 200px;
+            }
+            .process__icon__img{
+                @include sm{
+                    margin-left: 45px!important;
+                }
+            }
+            &:nth-child(1){
+                .process__icon__img{
+                    @include bg_icon(url(img/process_icon_profile.png))
+                }
+            }
+            &:nth-child(2){
+                .process__icon__img{
+                    @include bg_icon(url(img/process_icon_work.png))
+                }
+            }
+            &:nth-child(3){
+                .process__icon__img{
+                    @include bg_icon(url(img/process_icon_group.png))
+                }
+            }
+            &:nth-child(4){
+                .process__icon__img{
+                    @include bg_icon(url(img/process_icon_money.png))
+                }
+            }
+            p{
+                text-align: center;
+            }
+        }
+
+    }
+    
+}
