@@ -1,0 +1,35 @@
+.partner{
+    overflow: hidden;
+    min-height: 480px;
+    background-color: $gold;
+    position: relative;
+    h2{
+        @include line_decoration($black, url(img/h2_decor_black.png));
+        @extend %for_h2;
+    }
+    &__items{
+        
+        margin: 50px auto 0 auto;
+        overflow: hidden;
+        width: 100%;
+        // width: 600px;
+        position: relative;
+        .mains{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .element{
+            width:250px;
+            height: 140px;
+            text-align: center;
+            line-height: 140px;
+            border: 1px solid $black;
+            align-items: center;
+            @extend %flex-active;
+            justify-content: center;
+        }
+    }
+}
+
+
