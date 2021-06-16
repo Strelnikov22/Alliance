@@ -1,0 +1,32 @@
+.candidates{
+    background-image: url(img/bg_emloyees.png);
+    overflow: hidden;
+    background-color: $bg_black;
+    h2{
+        @include line_decoration($white, url(img/Vector_text_white.svg));
+        @extend %for_h2;
+    }
+    &__items{
+        margin: 50px auto 0 auto;
+        overflow: hidden;
+        width: 100%;
+        // width: 600px;
+        position: relative;
+        .mins{
+            width: 100%!important;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .item{
+            width:250px;
+            height: 140px;
+            text-align: center;
+            line-height: 140px;
+            border: 1px solid $white;
+            align-items: center;
+            @extend %flex-active;
+            justify-content: center;
+        }
+    }
+}

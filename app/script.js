@@ -102,20 +102,6 @@ class Carusel{
         this.pushCarusel();
     }
 
-    // renderPositionBegin() {
-    //     if(this.position>0) {
-    //         --this.position;
-    //     }
-        
-    // }
-    // renderPositionEnd() {
-    //     if(this.position<this.elemLendth - this.count) {
-    //         ++this.position;
-    //     }       
-    // }
-    // renderPositionBut(n) {
-    //        this.position = n;
-    // }
 
     pushCarusel() {
         let offset = (this.widthMain / this.elemLendth) * this.position;
@@ -137,108 +123,17 @@ class Carusel{
 
        
     }
-    // //------навигация кружочков-------
-    // dotsEvent(){
-    //     this.caruselDots.addEventListener('click', this.dotsTarget.bind(this));
-    // }
 
-    // dotsTarget(event){
-    //     let target = event.target;
-
-    //     if(target.matches('.carusel_dot')){
-    //         let c = +target.getAttribute('data-number');
-            
-    //         let widthElem = this.widthMain/this.elemLendth;
-    //         let offsetElem = widthElem*this.count*c-(widthElem*this.count);
-
-    //         this.main.style.transform = `translate(-${offsetElem}px)`;
-    //         this.main.style.transition = 'all 0.8s';
-            
-    //         this.position = c;
-    //         console.log(c);
-    //         console.log(this.position);
-    //         }
-            
-    //     }
-
-    // pushElem(i){
-    //     let widthElem = this.widthMain/this.elemLendth;
-      
-    //     this.main.style.transform = `translate(-${widthElem*i}px)`;
-    //     this.main.style.transition = 'all 0.8s';
-    // }
-
-
-    // //-----создание навигационных кнопок-----
-    // createArrows(){
-    //     const arrowsContainer = document.createElement('ul');
-    //     const arrowLeft = document.createElement('li');
-    //     const arrowRight = document.createElement('li');
-
-    //     arrowsContainer.classList.add('carusel_btn');
-    //     arrowLeft.classList.add('arrow_left');
-    //     arrowRight.classList.add('arrow_right');
-
-    //     this.main.after(arrowsContainer);
-    //     arrowsContainer.prepend(arrowLeft);
-    //     arrowsContainer.append(arrowRight);
-    // }
-
-    // //-----навигация навигационных кнопок-----
-    // leftRight() {
-    //     document.querySelector('.carusel_btn').addEventListener('click', this.clicks.bind(this));
-    // }
-
-    // clicks(event) {
-    //     let target = event.target;
-
-    //     if (target.matches('.arrow_left')) {
-    //         if(this.position>0) {
-    //             --this.position;
-    //             console.log(this.position);
-    //             this.pushElem(this.position);
-    //         }
-    //     }
-
-    //     if (target.matches('.arrow_right')) {
-    //         if(this.position < this.elemLendth-this.count) {
-    //             ++this.position;
-    //             console.log(this.position);
-    //             this.pushElem(this.position);
-    //         }
-    //     }
-    // }
-
-    // counterPosition(n) {
-    //     if(this.position>2) {
-    //         this.position = this.position - n;
-    //     }   
-        
-    // }
-
-    // init(){
-    //     this.widthForCarusel();
-    //     this.createDots();
-    //     this.createArrows();
-    //     this.dotsEvent();
-    //     this.leftRight();
-    // }
 }
 
 
 const parameter = {
         count: 4,
-        section: '.partner__items',
-        elements: '.element',
+        section: '.candidates__items',
+        elements: '.items',
         navigation: 'arrow'/'dots'/'full'
 };
 
 const caruselData = new Carusel(parameter);
 
 caruselData.init();
-
-
-// Object()
-// Map()
-// Set()
-// Array()

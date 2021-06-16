@@ -18,14 +18,14 @@
   font-weight: 500;
 }
 
-.aboutUs__text h2, .app h2, .partner h2, .process h2 {
+.aboutUs__text h2, .app h2, .candidates h2, .partner h2, .process h2 {
   text-align: center;
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 36px;
 }
 
-.count .container, .partner__items .element, .process__icon {
+.candidates__items .item, .count .container, .partner__items .item, .partner__items, .process__icon {
   display: flex;
 }
 
@@ -245,24 +245,26 @@ li {
   display: block;
 }
 .partner__items {
-  margin: 50px auto 0 auto;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
+  justify-content: space-evenly;
+  margin: 30px 0 0 0;
+  flex-wrap: wrap;
 }
-.partner__items .mains {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.partner__items .element {
-  width: 250px;
-  height: 140px;
-  text-align: center;
-  line-height: 140px;
+.partner__items .item {
   border: 1px solid #000;
-  align-items: center;
+  padding: 10px 15px;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 10px 0 0 0;
+  width: 150px;
   justify-content: center;
+  transition: all 150ms ease-in-out;
+}
+.partner__items .item:hover {
+  box-shadow: 0 0 10px 0 #dcc44f inset, 0 0 10px 1px rgba(0, 0, 0, 0.8);
+}
+.partner__items .item img {
+  max-width: 130px;
+  max-height: 60px;
 }
 
 .main {
@@ -418,6 +420,40 @@ li {
 }
 .count .container .item p {
   color: #b8b7b7;
+}
+
+.candidates {
+  background-image: url(img/bg_emloyees.png);
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.candidates h2 {
+  color: #fff;
+}
+.candidates h2::after {
+  content: url(img/Vector_text_white.svg);
+  display: block;
+}
+.candidates__items {
+  margin: 50px auto 0 auto;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.candidates__items .mins {
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.candidates__items .item {
+  width: 250px;
+  height: 140px;
+  text-align: center;
+  line-height: 140px;
+  border: 1px solid #fff;
+  align-items: center;
+  justify-content: center;
 }
 
 .app {
