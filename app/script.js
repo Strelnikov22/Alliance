@@ -117,7 +117,7 @@ class Carusel{
 
     init() {
         this.widthForCarusel();
-        this.createDots();
+        // this.createDots();
         this.createArrows();
         this.events();
 
@@ -129,11 +129,74 @@ class Carusel{
 
 const parameter = {
         count: 4,
-        section: '.candidates__items',
-        elements: '.items',
+        section: '.candidates__elem',
+        elements: '.elem',
         navigation: 'arrow'/'dots'/'full'
 };
 
 const caruselData = new Carusel(parameter);
 
 caruselData.init();
+
+
+
+//------------------------------header aнимация всплытия----------------------------------
+
+window.onscroll = () => {
+
+    let scroll = window.pageYOffset || document.documentElement.scrollTop;
+    let header = document.querySelector('.header');
+
+    if(scroll > 0){
+        header.classList.add('fixed');
+    }else{
+        header.classList.remove('fixed');
+    }
+  }
+
+  //--------------------------------TABS-----------------------------------------------
+
+class Tabs{
+    constructor(tab, item, tabs, items){
+        this.tab = document.querySelector(tab);
+        this.item = document.querySelector(item);
+        this.allTabs = Array.from(this.tab.querySelectorAll(tabs));
+        this.items = this.item.querySelectorAll(items);
+    }
+
+
+    // Перекючение активной вкладки
+    activeTabs() {
+        this.tab.addEventListener('mousemove', this.act.bind(this));
+    }
+
+    act(e) {
+        const target = e.target;
+
+        const oldTab = this.tab.querySelector('.active');
+        oldTab.classList.remove('active');
+
+        target.classList.add('active');
+
+        this.openTabs();
+    }
+
+    openTabs(elem) {
+       
+       const a = this.tab.querySelector('.active');
+       const i = this.allTabs.indexOf(a);
+
+       this.item.querySelector('.active').classList.remove('active');
+        
+       this.items[i].classList.add('active');
+     }
+
+    init(){
+        this.activeTabs();
+        
+    }
+}
+
+const d = new Tabs('.tabs', '.items', '.tab', '.item');
+
+d.init();

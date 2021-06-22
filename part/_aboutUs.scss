@@ -51,36 +51,70 @@
                 transform: scale(1.2);
             }
             &:nth-child(1){
-                @include aboutUs_icon(url(img/about-us_icon_gwarant.png));
-                top:95px;
-                left: 75px;
-
+                @include aboutUs_icon(url(img/about-us_icon_gwarant.svg));
+                top:87px;
+                left: 70px;
             }
             &:nth-child(2){
-                @include aboutUs_icon(url(img/about-us_icon_love.png));
-                bottom: 220px;
-                left: 35px;
+                @include aboutUs_icon(url(img/about-us_icon_love.svg));
+                bottom: 215px;
+                left: 33px;
             }
             &:nth-child(3){
-                @include aboutUs_icon(url(img/about-us_icon_search.png));
-                bottom: 45px;
-                left: 177px;
+                @include aboutUs_icon(url(img/about-us_icon_search.svg));
+                bottom: 38px;
+                left: 170px;
             }
             &:nth-child(4){
-                @include aboutUs_icon(url(img/about-us_icon_bell.png));
-                bottom: 45px;
-                right: 177px;
+                @include aboutUs_icon(url(img/about-us_icon_bell.svg));
+                bottom: 42px;
+                right: 170px;
             }
             &:nth-child(5){
-                @include aboutUs_icon(url(img/about-us_icon_docs.png));
-                bottom: 220px;
+                @include aboutUs_icon(url(img/about-us_icon_docs.svg));
+                bottom: 215px;
                 right: 35px;
             }
             &:nth-child(6){
-                @include aboutUs_icon(url(img/about-us_icon_profile.png));
-                top:95px;
-                right: 70px;
+                @include aboutUs_icon(url(img/about-us_icon_profile.svg));
+                top:90px;
+                right: 67px;
             }
         }
     }
+    .tabs{
+        .active{
+            transform: scale(1.2);
+        }
+    }
+    .items{
+        height: 250px;
+        position: relative;
+        .active{
+            display: block!important;
+            animation: fadeInFromNone 0.5s ease-out;
+            @keyframes fadeInFromNone {
+                0% {
+                    display: none;
+                    opacity: 0;
+                }
+            
+                1% {
+                    display: block!important;
+                    opacity: 0;
+                }
+            
+                100% {
+                    display: block!important;
+                    opacity: 1;
+                }
+            }
+        }
+        .item{
+            opacity: 0;
+            display: none;
+        }
+    }
+    
+    
 }

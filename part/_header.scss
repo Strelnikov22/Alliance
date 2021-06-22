@@ -1,10 +1,45 @@
+.fixed{
+    position: fixed!important;
+    z-index: 10000;
+    transition: all 250ms ease-in-out;
+    background-color: $black!important;
+    .header__container{
+        height: 50px!important;
+        @extend %anim;
+    }
+    .header__logo{
+        width: 56px!important;
+        height: 56px!important;
+        margin-top: 30px;
+        margin-left: 30px;
+        transition: all 450ms ease-in-out;
+        background-color: $black!important;
+        img{
+            width: 100px!important;
+            margin: -6px 0px 0px -4px;
+            transition: all 450ms ease-in-out;
+        }
+    }
+    .lang{
+        @extend %flex-active;
+        padding-left: 5px;
+        
+        li{
+            transition: all 750ms ease-in-out;
+            margin: 0 5px!important;
+        }
+    }
+}
+
+
 .header{
-    min-height: 0;
+    min-height: 0px;
     background-color: $bg_black;
     position: absolute;
     top: 0;
     left: 0px;
     right: 0px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.1);
     &__container{
         max-width: 1100px;
         display: flex;
@@ -15,6 +50,7 @@
         @include lg{
             justify-content: center;
         }
+        @extend %anim;
     }
     &__logo{
         background-color: $bg_black;
@@ -22,16 +58,18 @@
         height: 120px;
         border-radius: 100%;
         margin-top: 50px;
+        @extend %anim;
         img{
             width: 210px;
             margin: -7px 0px 0px -8px;
+            @extend %anim;
         }
         @include xl{
             margin-left: 20px;
         }
     }
     &__menu{
-        display: flex;
+        @extend %flex-active;
         align-items: center;
         position: relative;
         font: {

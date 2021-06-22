@@ -6,27 +6,52 @@
         @include line_decoration($white, url(img/Vector_text_white.svg));
         @extend %for_h2;
     }
-    &__items{
-        margin: 50px auto 0 auto;
+    &__elem{
         overflow: hidden;
         width: 100%;
-        // width: 600px;
+        margin: 10px auto;
         position: relative;
         .mins{
-            width: 100%!important;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        .item{
-            width:250px;
-            height: 140px;
-            text-align: center;
-            line-height: 140px;
-            border: 1px solid $white;
-            align-items: center;
             @extend %flex-active;
-            justify-content: center;
+            flex-direction: row;
+        }
+        .elem{
+            width: 300px;
+            text-align: center;
+            color: $white;
+            font-family: $font_text;
+            padding: 0px 30px;
+            .face{
+                width: 200px;
+                height: 200px;
+                border: 3px solid $white;
+                border-radius: 100%;
+                overflow: hidden;
+                margin: 20px auto 20px auto;
+                padding: 5px;
+                .border{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    overflow: hidden;   
+                    img{
+                        width: 100%;
+                        height: 100%;
+    
+                    }
+                }
+                
+            }
+            span{
+                color: $gray;
+                font-size: 12px;
+                margin: 15px 0;
+                display: block; 
+            }
+            .social{
+                border-top: 2px solid $gold;
+                margin-top: 20px;
+            }
         }
     }
 }

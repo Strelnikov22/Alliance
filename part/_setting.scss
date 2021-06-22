@@ -9,8 +9,13 @@ $font_count: 'Big Shoulders Display', cursive;
 $white:#fff;
 $black:#000;
 $gold:#dcc44f;
+// #F7E380
 $gray:#b8b7b7;
 $bg_black:rgba(0, 0, 0, 0.8);
+
+
+//animation
+%anim {transition: all 550ms ease-in-out;}
 
 //Фон
 %bg {
@@ -68,8 +73,8 @@ $bg_black:rgba(0, 0, 0, 0.8);
         position: center;
         size: 100%;
     }
-    width: 50px;
-    height: 70px;
+    width: 60px;
+    height: 80px;
 }
 
 @mixin line_decoration($color, $img) {
