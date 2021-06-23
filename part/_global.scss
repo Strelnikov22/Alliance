@@ -141,3 +141,37 @@ li{
     background-color: rgba(0, 0, 0, 0.473);
     border: 1px solid rgba(0, 0, 0, 0.473);
 }
+
+//--------------------scroll line----------------
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: $black;
+    
+  }
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $gold;
+    border: 1px solid $black;
+  }
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: $black;
+    border-left: 1px solid $gold;
+  }
+
+//------------------------scroll animation -------------------------
+
+.element-animation{
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 2s;
+    transform: translateY(0%);
+  }
