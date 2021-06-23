@@ -164,6 +164,19 @@ li {
   right: -4px;
 }
 
+.up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  z-index: 1300;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  border: 1px solid rgba(0, 0, 0, 0.473);
+}
+
 .process {
   background-image: url(img/bg_process.png), linear-gradient(270deg, #F4F2F2 18.35%, #fffffffa 100%);
   background-blend-mode: overlay;
@@ -752,10 +765,7 @@ li {
 .aboutUs__icons .icon {
   position: absolute;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
-}
-.aboutUs__icons .icon:hover {
-  transform: scale(1.2);
+  transition: all 0.5s ease-out 0.4s;
 }
 .aboutUs__icons .icon:nth-child(1) {
   background-image: url(img/about-us_icon_gwarant.svg);
@@ -818,33 +828,26 @@ li {
   right: 67px;
 }
 .aboutUs .tabs .active {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 .aboutUs .items {
-  height: 250px;
+  height: 260px;
   position: relative;
 }
 .aboutUs .items .active {
-  display: block !important;
-  animation: fadeInFromNone 0.5s ease-out;
-}
-@keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block !important;
-    opacity: 0;
-  }
-  100% {
-    display: block !important;
-    opacity: 1;
-  }
+  pointer-events: all !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.5s ease-out 0.4s !important;
 }
 .aboutUs .items .item {
+  width: 100%;
+  position: absolute;
+  top: 0;
   opacity: 0;
-  display: none;
+  transform: translateY(3px);
+  pointer-events: none;
+  transition: all 0.3s ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */

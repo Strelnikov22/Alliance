@@ -127,4 +127,17 @@ li{
      right:-4px;
  }
 
- 
+ //----------------------up----------------------------
+
+ .up {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	z-index: 1300;
+	cursor: pointer;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.473);
+    border: 1px solid rgba(0, 0, 0, 0.473);
+}
