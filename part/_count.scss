@@ -12,6 +12,7 @@
         text-align: center;
         align-content: center;
         min-height: 280px;
+        flex-wrap: wrap;
         .item{
             z-index: 100;
             min-width: 200px;
@@ -26,6 +27,9 @@
                 bottom: 60px;
                 z-index: -1;
                 left: 40px;
+            }
+            @include md{
+                margin: 0px 30px 30px 30px;
             }
             span{
                 font-size: 80px;

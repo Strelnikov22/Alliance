@@ -16,5 +16,8 @@
         color: $black;
         font-size: 30px;
         @extend %button_effect;
+        @include sm{
+            width: 300px;
+        }
     }
 }

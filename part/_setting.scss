@@ -31,7 +31,7 @@ $bg_black:rgba(0, 0, 0, 0.8);
 %button_effect{
     text-transform: uppercase;
     box-shadow: 0 0 40px 40px $gold inset, 0 0 0 0 $gold;
-    transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out!important;
         &:hover{
             color: $gold;
             box-shadow: 0 0 10px 0 rgba(220, 196, 79, 1) inset, 0 0 10px 4px rgba(220, 196, 79, 1);

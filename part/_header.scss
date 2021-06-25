@@ -19,6 +19,9 @@
             margin: -6px 0px 0px -4px;
             transition: all 450ms ease-in-out;
         }
+        @include lg{
+            margin-left: 0px;
+        }
     }
     .lang{
         @extend %flex-active;
@@ -66,6 +69,9 @@
         }
         @include xl{
             margin-left: 20px;
+        }
+        @include lg{
+            margin-left: -30px;
         }
     }
     &__menu{
