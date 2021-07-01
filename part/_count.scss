@@ -1,10 +1,20 @@
 .count{
-    background-image: url(img/bg_process.png),
-    linear-gradient(70deg, #F4F2F2 18.35%, #fffffffa 100%);
+    background-image: url(img/bg_process.png);
     background-blend-mode:overlay;
     overflow: hidden;
     min-height: 480px;
     z-index: 1;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(270deg, #fffffff8 18.35%, #f4f2f2e0 100%);
+    }
     .container{
         @extend %flex-active;
         justify-content: space-around;

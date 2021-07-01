@@ -1,9 +1,18 @@
 .process{
-    background-image: url(img/bg_process.png),
-    linear-gradient(270deg, #F4F2F2 18.35%, #fffffffa 100%);
-    background-blend-mode:overlay;
+    background-image: url(img/bg_process.png);
     overflow: hidden;
     min-height: 480px;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(270deg, #f4f2f2e0 18.35%, #fffffff8 100%);
+    }
     h2{
         @include line_decoration($black, url(img/h2_decor_black.png));
         @extend %for_h2;

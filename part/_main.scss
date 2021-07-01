@@ -1,8 +1,11 @@
 .main{
-    background-image: url(img/bg_main.png);
+    background-image: url(img/bg_main_xl.png);
     @extend %bg;
     text-align: center;
-
+    @include md{
+        background-size:auto!important;
+        background-attachment: inherit;
+    }
     h1{
         font:{
             family: $font_heading;
@@ -19,7 +22,9 @@
     }
     p{
         color: $white;
-        margin: 30px 0 45px 0px;
+        margin: 30px auto 45px auto;
+        max-width: 600px;
+        padding: 0px 20px;
     }
     a{
         padding: 15px 60px;

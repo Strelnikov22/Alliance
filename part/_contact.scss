@@ -1,8 +1,18 @@
 .contact{
-    background-image: url(img/bg_process.png),
-    linear-gradient(270deg, #F4F2F2 18.35%, #fffffffa 100%);
+    background-image: url(img/bg_process.png);
     background-blend-mode:overlay;
     overflow: hidden;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(270deg, #f4f2f2e0 18.35%, #fffffff8 100%);
+    }
     .container{
         @extend %flex-active;
         justify-content: space-between;

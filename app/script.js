@@ -20,9 +20,10 @@ class Carusel{
 
     //--------управление количеством отображаемых айтемов--------
     widthForCarusel(){
-        let widthSection = parseInt(getComputedStyle(this.section).width)
+        let widthSection = parseInt(getComputedStyle(this.section).width);
         this.widthMain = widthSection/this.count*this.elemLendth;
         this.main.style.width = this.widthMain+'px';
+        console.log(widthSection);
     }
 
     //-----создание навигационных кружочков-----
@@ -126,12 +127,33 @@ class Carusel{
 
 }
 
+const count = () => {
+    let widthWin = getComputedStyle(document.body).width;
+    
+    if(widthWin<550){
+        return 1
+    }
+    if(widthWin<830){
+        return 2
+    }
+    if(widthWin<1090){
+        return 3
+    }else{
+        return 4
+    }
+}
 
+count();
 const parameter = {
-        count: 4,
+        count: count(),
         section: '.candidates__elem',
         elements: '.elem',
         navigation: 'arrow'/'dots'/'full'
+        // countel: {
+        //     1024: 4,
+        //     768: 3,
+        //     540: 2
+        // }
 };
 
 const caruselData = new Carusel(parameter);
@@ -262,7 +284,7 @@ class Scrolling{
 
 const scroll = {
     arrowTop: '.up',
-    link: '.header__menu a, .main a',
+    link: '.header__menu>li>a, .main a',
 };
 
 const scrollLink = new Scrolling(scroll);
