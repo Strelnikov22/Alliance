@@ -870,7 +870,6 @@ li {
   overflow: hidden;
   min-height: 480px;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
 }
 .app h2 {
   color: #fff;
