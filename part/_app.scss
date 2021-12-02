@@ -4,7 +4,7 @@
     min-height: 480px;
     background-color: $bg_black;
     //---------------off block------------
-    display: none;
+    // display: none;
     //---------------off block------------
     h2{
         @include line_decoration($white, url(img/Vector_text_white.svg));

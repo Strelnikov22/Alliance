@@ -19,11 +19,20 @@ class Carusel{
     }
 
     //--------управление количеством отображаемых айтемов--------
-    widthForCarusel(){
-        let widthSection = parseInt(getComputedStyle(this.section).width);
-        this.widthMain = widthSection/this.count*this.elemLendth;
-        this.main.style.width = this.widthMain+'px';
-        console.log(widthSection);
+    // widthForCarusel(){
+    //     let widthSection = parseInt(getComputedStyle(this.section).width);
+    //     this.widthMain = widthSection/this.count*this.elemLendth;
+    //     this.main.style.width = this.widthMain+'px';
+    //     // console.log(widthSection);
+    // }
+
+    widthForCaruselV2(){
+        this.elements.forEach( (item) => {
+            let widthitem = parseInt(getComputedStyle(item).width);
+            this.widthMain = widthitem*this.elemLendth;
+            this.main.style.width = this.widthMain+'px';
+        })
+        
     }
 
     //-----создание навигационных кружочков-----
@@ -98,7 +107,7 @@ class Carusel{
             this.position = c;}
 
 
-        console.log(this.position);
+        // console.log(this.position);
 
         this.pushCarusel();
     }
@@ -110,38 +119,41 @@ class Carusel{
         this.main.style.transform = `translateX(-${offset}px)`;
         this.main.style.transition = 'transform 0.5s';
 
-        console.log(offset);
+        // console.log(offset);
     }
 
 
 
 
     init() {
-        this.widthForCarusel();
+        // this.widthForCarusel();
         // this.createDots();
         this.createArrows();
         this.events();
-
+        this.widthForCaruselV2();
        
     }
 
 }
 
 const count = () => {
-    let widthWin = getComputedStyle(document.body).width;
+
+    let widthWin = document.documentElement.clientWidth;
     
-    if(widthWin<550){
+    if(widthWin<774){
         return 1
     }
-    if(widthWin<830){
+    if(widthWin<1000){
         return 2
     }
-    if(widthWin<1090){
+    if(widthWin<1200){
         return 3
     }else{
         return 4
     }
+    
 }
+console.log(count())
 
 count();
 const parameter = {
